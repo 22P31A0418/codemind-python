@@ -1,18 +1,18 @@
 n=int(input())
 a=0
 b=1
-while(n!=0):
+while(1):
     c=a+b
     a=b
     b=c
-    if(a<n):
-        min=a
+    if(c<n):
+        m=c
     else:
-        max=a
+        mx=c
         break
-if(n-min<max-n):
-    print(min)
-elif(n-min==max-n):
-    print(min,max)
+if(n-m<mx-n):
+    print(m)
+elif(n-m==mx-n):
+    print(m,mx)
 else:
-    print(max)
+    print(mx)
