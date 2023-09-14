@@ -1,8 +1,9 @@
 n=input()
-ls=[i for i in n]
-for i in range(0,len(ls)):
-    if(ls[i]=='6'):
-        ls[i]='9'
+lst=[]
+lst=[int(i) for i in n]
+for i in range(0,len(lst)):
+    if(lst[i]==6):
+        lst[i]=9
         break
-for i in ls:
-    print(i,end='')
+for i in lst:
+    print(i,end="")
