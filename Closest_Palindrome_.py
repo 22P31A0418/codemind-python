@@ -1,31 +1,24 @@
-def pal(n:str)->int:
-    k=n
-    s=0
-    while(n!=0):
-        r=n%10
-        s=s*10+r
-        n=n//10
-    return k==s
-def prev_pal(n):
-    while(n!=0):
-        if(pal(n)):
-            break
-        else:
-            n=n-1
-    return n
-def next_pal(n):
-    while(n!=0):
-        if(pal(n)):
-            break
-        else:
-            n=n+1
-    return n
+def paln(n):
+    if(n==n[::-1]):
+        return True
+    else:
+        return False
+def prev_paln(n):
+    while(n):
+        if(paln(str(n))):
+            return n
+        n-=1
+def next_paln(n):
+    while(n):
+        if(paln(str(n))):
+            return n
+        n+=1
 n=int(input())
-fn=prev_pal(n-1)
-pn=next_pal(n+1)
-if(n-fn==pn-n):
-    print(fn,pn)
-elif(n-fn>pn-n):
-    print(pn)
+f=prev_paln(n-1)
+l=next_paln(n+1)
+if(n-f==l-n):
+    print(f,l)
+elif(n-f<l-f):
+    print(f)
 else:
-    print(fn)
+    print(l)
