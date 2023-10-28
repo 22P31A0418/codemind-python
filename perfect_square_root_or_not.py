@@ -1,5 +1,6 @@
 n=int(input())
-if(n**0.5==int(n**0.5)):
-    print("True")
+s=n%(n**0.5)
+if(s==0):
+    print(True)
 else:
-    print("False")
+    print(False)
